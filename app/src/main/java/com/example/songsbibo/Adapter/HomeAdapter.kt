@@ -2,7 +2,10 @@ package com.example.songsbibo.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
+import com.example.songsbibo.R
+
 import com.example.songsbibo.data.model.Song
 import com.example.songsbibo.databinding.FragmentHomeBinding
 import com.example.songsbibo.databinding.ListItemBinding
@@ -28,6 +31,9 @@ class HomeAdapter(
         holder.binding.textViewSongName.text = songs.name
         holder.binding.textViewInterpretName.text = songs.interpret
         holder.binding.textViewDauer.text = songs.dauer
+        //TODO image funktioniert nicht
+        //holder.binding.imageViewCover.setImageResource(songs.cover)
+        holder.binding.imageViewCover.setImageResource(R.drawable._2)
     }
 
 
