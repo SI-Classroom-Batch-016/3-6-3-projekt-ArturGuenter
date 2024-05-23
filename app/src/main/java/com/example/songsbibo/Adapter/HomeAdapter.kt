@@ -11,7 +11,8 @@ import com.example.songsbibo.databinding.FragmentHomeBinding
 import com.example.songsbibo.databinding.ListItemBinding
 
 class HomeAdapter(
-    private val dataset:List<Song>
+    private val dataset:List<Song> ,
+    val itemClickedCallback: (Song) -> Unit ,
 ): RecyclerView.Adapter<HomeAdapter.ItemViewHolder>() {
 
 
@@ -34,6 +35,10 @@ class HomeAdapter(
         //TODO image funktioniert nicht
         //holder.binding.imageViewCover.setImageResource(songs.cover)
         holder.binding.imageViewCover.setImageResource(R.drawable._2)
+
+        holder.binding.cardView.setOnClickListener {
+            itemClickedCallback(songs)
+        }
     }
 
 
