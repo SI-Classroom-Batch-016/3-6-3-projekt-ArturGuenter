@@ -52,13 +52,17 @@ class DetailFragment : Fragment() {
 
         binding.imageViewHinzufGenEntfernenButton.setOnClickListener {
 
-            viewModel.addToBibo(Song(
-                viewModel.selectedSongItem.value!!.name,
-                viewModel.selectedSongItem.value!!.interpret,
-                viewModel.selectedSongItem.value!!.dauer,
-                viewModel.selectedSongItem.value!!.liked,
-                viewModel.selectedSongItem.value!!.cover)
-            )
+            if (viewModel.selectedSongItem.value!!.liked == false){
+
+
+
+                viewModel.addToBibo(viewModel.selectedSongItem.value!!)
+
+            }
+
+            else{
+                viewModel.removeFromBibo(viewModel.selectedSongItem.value!!)
+            }
 
         }
 

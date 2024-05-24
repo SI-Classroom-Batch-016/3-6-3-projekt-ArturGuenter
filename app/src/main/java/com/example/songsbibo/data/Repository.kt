@@ -24,8 +24,6 @@ class Repository {
 
     fun loadBibliothek():List<Song>{
         return listOf(
-            Song("Ur In My Head","Ufo361, Monty Datta & Hinshi", "3:38",false,R.drawable._10000000),
-            Song("Pedro","Jaxomy, Agatino Romero & Raffaella Carrà", "2:50",false,R.drawable._30000),
 
             )
     }

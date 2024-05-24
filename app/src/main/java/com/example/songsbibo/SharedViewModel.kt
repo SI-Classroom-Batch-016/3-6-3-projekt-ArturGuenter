@@ -24,14 +24,18 @@ class SharedViewModel : ViewModel() {
 
     fun addToBibo(song: Song){
        repoBibo.add(song)
+        song.liked = true
         Log.d("Liste von Songs", "$repoBibo")
 
     }
 
     fun removeFromBibo(song:Song){
         repoBibo.remove(song)
+        song.liked = false
         Log.d("Liste von Songs", "$repoBibo")
     }
+
+
 
 
 }

@@ -49,6 +49,7 @@ class BibliothekFragment : Fragment() {
         binding.rvBibo.adapter = adapter
 
 
+        adapter.notifyDataSetChanged()
     }
 
 
