@@ -51,6 +51,7 @@ class DetailFragment : Fragment() {
 
 
         binding.imageViewHinzufGenEntfernenButton.setOnClickListener {
+
             viewModel.addToBibo(Song(
                 viewModel.selectedSongItem.value!!.name,
                 viewModel.selectedSongItem.value!!.interpret,
