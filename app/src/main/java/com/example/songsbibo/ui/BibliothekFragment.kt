@@ -1,6 +1,7 @@
 package com.example.songsbibo.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,8 +36,8 @@ class BibliothekFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val songs = Repository().loadBibliothek()
-
+        //val songs = Repository().loadBibliothek()
+        val songs = viewModel.repoBibo
 
         val itemClickedCallback : (Song) -> Unit = {
 
@@ -45,11 +46,12 @@ class BibliothekFragment : Fragment() {
             findNavController().navigate(R.id.detailFragment)
         }
 
+        Log.d("VordemAdapter", "$songs")
         val adapter = BiboAdapter(songs,itemClickedCallback)
         binding.rvBibo.adapter = adapter
 
 
-        adapter.notifyDataSetChanged()
+
     }
 
 

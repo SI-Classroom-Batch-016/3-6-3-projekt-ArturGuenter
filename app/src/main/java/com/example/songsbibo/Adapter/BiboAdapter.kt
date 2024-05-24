@@ -25,6 +25,7 @@ class BiboAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val songs = dataset[position]
+
         holder.binding.textViewSongName.text = songs.name
         holder.binding.textViewInterpretName.text = songs.interpret
         holder.binding.textViewDauer.text = songs.dauer
@@ -35,7 +36,7 @@ class BiboAdapter(
 
         }
 
-        
+
 
     }
 
