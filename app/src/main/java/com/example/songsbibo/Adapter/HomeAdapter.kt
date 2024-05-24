@@ -33,12 +33,17 @@ class HomeAdapter(
         holder.binding.textViewInterpretName.text = songs.interpret
         holder.binding.textViewDauer.text = songs.dauer
         //TODO image funktioniert nicht
-        //holder.binding.imageViewCover.setImageResource(songs.cover)
-        holder.binding.imageViewCover.setImageResource(R.drawable._2)
+
+        holder.binding.imageViewCover.setImageResource(songs.cover)
+
 
         holder.binding.cardView.setOnClickListener {
             itemClickedCallback(songs)
+
         }
+
+
+
     }
 
 

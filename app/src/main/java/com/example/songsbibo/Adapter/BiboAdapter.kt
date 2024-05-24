@@ -7,7 +7,8 @@ import com.example.songsbibo.data.model.Song
 import com.example.songsbibo.databinding.ListItemBinding
 
 class BiboAdapter(
-    private val dataset:List<Song>
+    private val dataset:List<Song>,
+    val itemClickedCallback: (Song) -> Unit ,
 ): RecyclerView.Adapter<BiboAdapter.ItemViewHolder>() {
 
 
@@ -27,6 +28,15 @@ class BiboAdapter(
         holder.binding.textViewSongName.text = songs.name
         holder.binding.textViewInterpretName.text = songs.interpret
         holder.binding.textViewDauer.text = songs.dauer
+        holder.binding.imageViewCover.setImageResource(songs.cover)
+
+        holder.binding.cardView.setOnClickListener {
+            itemClickedCallback(songs)
+
+        }
+
+        
+
     }
 
 }
