@@ -35,6 +35,12 @@ class SharedViewModel : ViewModel() {
         Log.d("Liste von Songs", "$repoBibo")
     }
 
+    fun nextSong(song:Song){
+
+
+
+    }
+
 
 
 

@@ -44,10 +44,13 @@ class DetailFragment : Fragment() {
 
         }
 
+        //Zurückpfeil
         binding.imageViewArrowBack.setOnClickListener {
 
             findNavController().navigateUp()
         }
+
+
 
 
         binding.imageViewHinzufGenEntfernenButton.setOnClickListener {
